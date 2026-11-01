@@ -1,0 +1,33 @@
+DANIEL MUSIC — INSTRUCCIONES SENCILLAS
+
+He preparado una versión completa de la aplicación web instalable (PWA).
+Incluye búsqueda de vídeos de YouTube, reproductor oficial integrado, favoritos, Mi lista, ajustes para guardar/borrar la clave API y almacenamiento local.
+
+IMPORTANTE: para buscar vídeos hace falta una clave propia de YouTube Data API v3. YouTube controla la reproducción, los anuncios y las restricciones. La aplicación no extrae audio ni garantiza reproducción en segundo plano.
+
+PARA PONERLA EN INTERNET (HTTPS):
+1. Entra en https://github.com/ y crea una cuenta si no tienes una.
+2. Crea un repositorio nuevo llamado daniel-music. Puedes marcarlo como público.
+3. Sube TODOS los archivos y carpetas que hay dentro de esta carpeta, manteniendo la carpeta icons.
+4. En el repositorio, entra en Settings > Pages.
+5. En Build and deployment, selecciona Deploy from a branch; elige la rama main y la carpeta / (root), y guarda.
+6. Espera a que GitHub Pages publique la web. La dirección aparecerá en esa misma pantalla.
+7. Abre esa dirección en Chrome desde el Redmi. Entra en Ajustes de Daniel Music (⚙) para añadir tu clave API.
+8. En Chrome, menú ⋮ > Instalar aplicación o Añadir a pantalla de inicio.
+
+PARA CREAR LA CLAVE API:
+1. Abre https://console.cloud.google.com/ e inicia sesión con Google.
+2. Crea un proyecto.
+3. En APIs y servicios > Biblioteca, busca YouTube Data API v3 y pulsa Habilitar.
+4. En APIs y servicios > Credenciales, crea una clave de API.
+5. Restringe la clave a YouTube Data API v3. Si puedes, añade también restricciones de sitio web para el dominio donde publiques la app.
+6. Copia la clave y pégala en Ajustes de Daniel Music. No la publiques ni la compartas.
+
+PRIVACIDAD:
+La clave API, favoritos y Mi lista se guardan en el almacenamiento local del navegador de ese dispositivo. No introduzcas la clave en un móvil compartido.
+
+ARCHIVOS:
+- index.html: aplicación.
+- manifest.webmanifest: configuración de instalación.
+- sw.js: caché para que la interfaz pueda abrirse sin conexión después de cargarla.
+- icons/: iconos de la aplicación.
